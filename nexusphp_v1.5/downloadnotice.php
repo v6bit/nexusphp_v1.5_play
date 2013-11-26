@@ -125,6 +125,29 @@ if ($showclientnotice)
 <div><?php echo $lang_downloadnotice['text_for']?>Windows, Linux, Mac OS X</div>
 </td>
 </tr>
+
+
+<tr>
+<td class="embedded" style="text-align: center; padding: 5px;" width="50%">
+<a href="http://www.transmissionbt.com/download/" target="_blank" title="<?php echo $lang_downloadnotice['title_download']?>transmission"><img src="pic/transmission.png" width="130" height="130" alt="uTorrent" /></a>
+</td>
+<td class="embedded" style="text-align: center; padding: 5px;" width="50%">
+<a href="http://www.v6speed.org/v6Speed/" target="_blank" title="<?php echo $lang_downloadnotice['title_download']?>v6speed"><img   src="pic/v6Speed256.png" width="130" height="130" alt="Vuze" /></a>
+</td>
+</tr>
+<tr>
+<td class="embedded" style="text-align: center; padding: 5px;">
+<div class="big"><a href="http://www.transmissionbt.com/download/" target="_blank" title="<?php echo $lang_downloadnotice['title_download']?>transmission"><b>transmission</b></a></div>
+<div><?php echo $lang_downloadnotice['text_for']?>Linux, Mac OS X</div>
+</td>
+<td class="embedded" style="text-align: center; padding: 5px;">
+<div class="big"><a href="http://www.v6speed.org/v6Speed/" target="_blank" title="<?php echo $lang_downloadnotice['title_download']?>v6speed"><b>6速</b></a></div>
+<div><?php echo $lang_downloadnotice['text_for']?>Windows</div>
+</td>
+</tr>
+
+
+
 </table>
 </td>
 <?php

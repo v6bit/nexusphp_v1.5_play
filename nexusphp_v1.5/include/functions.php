@@ -6,7 +6,8 @@ include_once($rootpath . 'include/globalfunctions.php');
 include_once($rootpath . 'include/config.php');
 include_once($rootpath . 'classes/class_advertisement.php');
 require_once($rootpath . get_langfile_path("functions.php"));
-
+global $BASEURLA;
+$BASEURLA=$BASIC["BASEURL"];
 function get_langfolder_cookie()
 {
 	global $deflang;
@@ -2919,7 +2920,7 @@ function torrenttable($res, $variant = "torrent") {
 	global $showextinfo;
 	global $torrentmanage_class, $smalldescription_main, $enabletooltip_tweak;
 	global $CURLANGDIR;
-
+	global $BASEURL;
 	if ($variant == "torrent"){
 		$last_browse = $CURUSER['last_browse'];
 		$sectiontype = $browsecatmode;
@@ -3125,7 +3126,7 @@ while ($row = mysql_fetch_assoc($res))
 			$act .= ($act ? "<br />" : "")."<a id=\"bookmark".$counter."\" ".$bookmark." >".get_torrent_bookmark_state($CURUSER['id'], $id)."</a>";
 		}
 
-	print("<td width=\"20\" class=\"embedded\" style=\"text-align: right; \" valign=\"middle\">".$act."</td>\n");
+	print("<td width=\"40\" class=\"embedded\" style=\"text-align: right; \" valign=\"middle\">".$act."<a href=\"v6player://$id&ty=1&ro=2&url=	$BASEURL&id=$id&ua={$CURUSER['passkey']}\"><img class=\"delbookmark\" src=\"pic/v6Speed16.png\" title=\"在线播放（PS：要体验在线播放功能，需要首先安装v6Speed才可以直接播放资源，v6Speed的下载地址在首页的友情连接处）\"></img></a></td>\n");
 
 	print("</tr></table></td>");
 	if ($wait)
